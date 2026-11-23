@@ -1,0 +1,29 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.simone.icam'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'com.simone.icam'
+        minSdk 26
+        targetSdk 35
+        versionCode 8
+        versionName '0.8'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            // signed with the debug key so the APK installs directly (personal use)
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
